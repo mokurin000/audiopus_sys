@@ -85,7 +85,7 @@ fn default_library_linking() -> bool {
     {
         true
     }
-    #[cfg(any(target_os = "freebsd", all(unix, target_env = "gnu")))]
+    #[cfg(any(target_os = "freebsd", target_os = "android", all(unix, target_env = "gnu")))]
     {
         false
     }
